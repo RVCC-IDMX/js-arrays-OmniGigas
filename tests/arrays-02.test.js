@@ -58,13 +58,13 @@ test('makeWordTitleCase', () => {
 test('replaceTheString', () => {
   const sentence = 'The quick brown fox jumps over the lazy dog';
   expect(replaceTheString(sentence, 'quick', 'slow')).toBe(
-    'The slow brown fox jumps over the lazy dog'
+    'The slow brown fox jumps over the lazy dog',
   );
 });
 
 test('makeSentenceTitleCase', () => {
   const sentence = 'the quick brown fox jumps over the lazy dog';
   expect(makeSentenceTitleCase(sentence)).toBe(
-    'The Quick Brown Fox Jumps Over The Lazy Dog'
+    'The Quick Brown Fox Jumps Over The Lazy Dog',
   );
 });
