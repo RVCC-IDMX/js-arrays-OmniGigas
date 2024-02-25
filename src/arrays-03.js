@@ -18,6 +18,9 @@
  */
 function addUpArrayElements(arr) {
   // write your code here & return value
+  let sum = 0;
+  for (const a of arr) sum += a;
+  return sum;
 }
 
 /**
@@ -29,6 +32,11 @@ function addUpArrayElements(arr) {
  */
 function makeSquareNumbers(arr) {
   // write your code here & return value
+  const squared = arr.map((item) => {
+    const squareNum = item * item;
+    return squareNum;
+  });
+  return squared;
 }
 
 /**
@@ -43,6 +51,11 @@ function makeSquareNumbers(arr) {
  */
 function filterForLargeWords(arr, length) {
   // write your code here & return value
+  const filteredWords = arr.filter(getFilteredWords);
+  function getFilteredWords(element) {
+    return element.length > length;
+  }
+  return filteredWords;
 }
 
 /**
@@ -54,6 +67,14 @@ function filterForLargeWords(arr, length) {
  */
 function findTheFirstEvenNumber(arr) {
   // write your code here & return value
+  const firstEven = arr.find(findEven);
+
+  function findEven(item) {
+    if (item % 2 === 0) {
+      return item;
+    }
+  }
+  return firstEven;
 }
 
 /**
@@ -79,6 +100,8 @@ function sortCaseSensitive(arr) {
  */
 function makeTheString(arr, separator) {
   // write your code here & return value
+  const combined = arr.join(' ');
+  return combined;
 }
 
 /**
@@ -90,6 +113,9 @@ function makeTheString(arr, separator) {
  */
 function reverseTheArray(arr) {
   // write your code here & return value
+  const shallowCopy = arr.slice(0);
+  const backwardsArray = shallowCopy.reverse();
+  return backwardsArray;
 }
 
 /**
@@ -127,6 +153,8 @@ function dropRight(arr, n) {
  */
 function dropLeft(arr, n) {
   // write your code here & return value
+  const select = arr.slice(n);
+  return select;
 }
 
 /**
@@ -140,6 +168,10 @@ function dropLeft(arr, n) {
  */
 function checkArrayForValue(arr, val) {
   // write your code here & return value
+  if (arr.includes(val)) {
+    return true;
+  }
+  return false;
 }
 
 module.exports = {
